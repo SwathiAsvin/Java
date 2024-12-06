@@ -1,0 +1,40 @@
+interface studentinfo {
+    int id = 121;
+    String name = "Swathi";
+    String course = "BCA";
+}
+
+interface studentmarksheet {
+    int JAVA = 99;
+    int CN = 99;
+    int DEM = 99;
+    int DM = 90;
+    int MC = 99;
+}
+
+class StudentMarkSheetInfo implements studentinfo, studentmarksheet {
+    int total;
+    float avg;
+
+    void finalsal() {
+        total = JAVA + CN + DEM + DM + MC;
+        avg = total / 5;
+        System.out.println("DISPLAYING STUDENTINFO");
+        System.out.println("Student Id:" + id);
+        System.out.println("Student name:" + name);
+        System.out.println("Student course:" + course);
+        System.out.println("DISPLAYING STUDENT MARKSHEET");
+        System.out.println("JAVA mark:" + JAVA);
+        System.out.println("CN mark:" + CN);
+        System.out.println("DEM mark:" + DEM);
+        System.out.println("DM mark:" + DM);
+        System.out.println("MC mark:" + MC);
+        System.out.println("Total mark:" + total);
+        System.out.println("average:" + avg);
+    }
+
+    public static void main(String args[]) {
+        StudentMarkSheetInfo obj = new StudentMarkSheetInfo();
+        obj.finalsal();
+    }
+}
