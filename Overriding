@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class ParentAddition {
+    void addition(int a, int b) {
+        int sum = a + b;
+        System.out.println("The sum of two number is:" + sum);
+    }
+}
+
+class ChildAddition extends ParentAddition {
+    public void addition(int a, int b) {
+        int sum = a + b;
+        System.out.println("The sum of two number is:" + sum);
+    }
+}
+
+class OVERRIDING {
+    public static void main(String args[]) {
+        ChildAddition add = new ChildAddition();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of x:");
+        int x = sc.nextInt();
+        System.out.println("Enter the value of y:");
+        int y = sc.nextInt();
+        add.addition(x, y);
+        sc.close();
+    }
+}
