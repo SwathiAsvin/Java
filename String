@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+class SString {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter string1:");
+        String s1 = sc.nextLine();
+        System.out.println("Enter string 2:");
+        String s2 = sc.nextLine();
+        System.out.println("The length of s1 is:" + s1.length());
+        System.out.println("The length of s2 is:" + s2.length());
+        s1 = s1.concat(s2);
+        System.out.println("The concatnition ofs1 and s2 is:" + s1);
+        System.out.println("Upper case of S1 is:" + s1.toUpperCase());
+        System.out.println("lower case of S1 is:" + s1.toLowerCase());
+        String reversedS1 = new StringBuilder(s1).reverse().toString();
+        System.out.println("The reverse of S1 is:" + reversedS1);
+        sc.close();
+    }
+}
