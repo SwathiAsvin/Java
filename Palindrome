@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class Apalindrome {
+    void msg() {
+        System.out.println("Hello");
+        int r, sum = 0, temp, n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter any number:");
+        n = sc.nextInt();
+        temp = n;
+        while (n > 0) {
+            r = n % 10;
+            sum = (sum * 10) + r;
+            n = n / 10;
+        }
+        if (temp == sum)
+            System.out.println("It is a palindrome");
+        else
+            System.out.println("It is not a palindrome");
+    }
+}
+class Bpalindrome {
+    public static void main(String args[]) {
+        Apalindrome obj = new Apalindrome();
+        obj.msg();
+    }
+}
